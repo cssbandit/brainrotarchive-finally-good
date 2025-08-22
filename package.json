@@ -1,0 +1,26 @@
+{
+  "name": "italian-brainrot-archive-s2",
+  "version": "1.0.0",
+  "description": "Italian Brainrot Archive S2: Mutation Chronicles - A comprehensive collection of viral mutated animal characters",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'No build required - static HTML site'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cssbandit/brainrotarchive-finally-good.git"
+  },
+  "keywords": [
+    "brainrot",
+    "italian",
+    "memes",
+    "tiktok",
+    "youtube",
+    "characters",
+    "archive"
+  ],
+  "author": "cssbandit",
+  "license": "MIT",
+  "homepage": "https://github.com/cssbandit/brainrotarchive-finally-good#readme"
+}
