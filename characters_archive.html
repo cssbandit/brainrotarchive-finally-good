@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover">
+    <title>Italian Brainrot Archive S2: Mutation Chronicles - Complete Character Database</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta property="og:title" content="Italian Brainrot Archive S2: Mutation Chronicles - Complete Character Database">
+    <meta name="theme-color" content="#00a69c">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 3px solid #00a69c;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #00a69c;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #cccccc;
+        }
+        
+        .main-container {
+            display: flex;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+            gap: 2rem;
+        }
+        
+        .content-area {
+            flex: 1;
+        }
+        
+        .toc-sidebar {
+            width: 300px;
+            background: #2c2c2c;
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+            border: 2px solid #00a69c;
+        }
+        
+        .toc-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #00a69c;
+            margin-bottom: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #00a69c;
+            padding-bottom: 0.5rem;
+        }
+        
+        .toc-list {
+            list-style: none;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .toc-item {
+            margin-bottom: 0.5rem;
+        }
+        
+        .toc-link {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.3rem 0.5rem;
+            border-radius: 6px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-link:hover {
+            background: #00a69c;
+            color: white;
+        }
+        
+        .stats {
+            background: #2c2c2c;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            border: 2px solid #00a69c;
+        }
+        
+        .stats span {
+            color: #00a69c;
+            font-weight: bold;
+        }
+        
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .character-card {
+            background: #2c2c2c;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #00a69c;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .character-image-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #00a69c;
+        }
+        
+        .character-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .character-content {
+            padding: 1.5rem;
+        }
+        
+        .character-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #00a69c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .character-section {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        
+        .character-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tag {
+            background: #00a69c;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .character-description {
+            color: #cccccc;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        
+        .character-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .link-item {
+            color: #00a69c;
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.4rem;
+            border: 1px solid #00a69c;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .link-item:hover {
+            background: #00a69c;
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .youtube-icon {
+            background: #ff0000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.7rem;
+            padding: 0.5rem 0.8rem;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .youtube-icon:hover {
+            opacity: 0.8;
+        }
+        
+        .tiktok-icon {
+            background: #000000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.7rem;
+            padding: 0.5rem 0.8rem;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .tiktok-icon:hover {
+            opacity: 0.8;
+        }
+        
+        .footer {
+            background: #2c2c2c;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 2px solid #00a69c;
+        }
+        
+        .footer p {
+            color: #888;
+        }
+        
+        @media (max-width: 1200px) {
+            .main-container {
+                flex-direction: column;
+            }
+            
+            .toc-sidebar {
+                width: 100%;
+                position: static;
+            }
+            
+            .toc-list {
+                max-height: 200px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .characters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-container {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Italian Brainrot Archive S2</h1>
+        <p>Mutation Chronicles - Complete Character Database</p>
+    </div>
+    
+    <div class="main-container">
+        <div class="content-area">
+            <div class="stats">
+                <p>Total Characters: <span>59</span> | Scraped on: <span>2025-08-22 15:37:13</span></p>
+            </div>
+            
+            <div class="characters-grid" id="characters-grid">
+                <!-- Characters will be loaded here via JavaScript -->
+            </div>
+        </div>
+        
+        <div class="toc-sidebar">
+            <div class="toc-title">Table of Contents</div>
+            <ul class="toc-list" id="toc-list">
+                <!-- TOC will be generated via JavaScript -->
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Italian Brainrot Archive S2: Mutation Chronicles</p>
+        <p>Complete Character Database - All 59 characters from the Italian Brainrot universe</p>
+    </div>
+
+    <script>
+        // Character data from the JSON file
+        const charactersData = [
+            {
+                "name": "Talpa Di Ferro",
+                "section": "2.1",
+                "main_image": "https://i.namu.wiki/i/RBRReg7SRmjR05LXjkn5hsPXeO7fB1l7An-iAIGCz9XtVE6_Q4SYfdbbJ4EECvxQGNUCF24IXTxJf7dz_tULiYiKUBbaO8_3RSe9qPKRFzH3lSJwpmVBxV87mZ7uMyDqOVZ7cpPXIXpcr75zwK0FdA.webp",
+                "tags": ["Mole", "Cyborg"],
+                "description": "Mole where multiple parts are mechanized. The eyes and foreheads are equipped with a microchip that allows full and accurate scanning of surrounding organisms. There is a small drill that can penetrate any solid object in the front teeth.",
+                "links": ["Mole", "Cyborg"],
+                "videos": [
+                    {"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@italianbrainrotanimals01/video/7524020191127211286", "text": "TT"}
+                ]
+            },
+            {
+                "name": "Chef Crabracadabra",
+                "section": "2.2",
+                "main_image": "https://i.namu.wiki/i/-ooQ8A_BOPbfHrm2F30I90pqlQobXBeKbgxLzU3YQRSR61nJkKp3thS5d8jXbI-N61Nt4kLpSkzg_w-LeMh9f3vIh7QJih4JQYc1OfcakMbvLUtBWIjQ7kkgnDUNTSFthACttP5Mb8RwAMUrXtUNLQ.webp",
+                "tags": ["Chef", "Crab", "Abracadabra"],
+                "description": "A chef with a crab's head and tongs, born in 1939. Originally a fisherman from a coastal village, became a crab after signing a contract with a sea witch to save villagers from famine. His tongs can tear anything and open dimensional portals.",
+                "links": ["Chef", "Crab", "Abracadabra"],
+                "videos": [
+                    {"url": "https://youtu.be/aDddm4r4Sr8?si=LDao_xdPNAEjAjVB", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@mammamemea4/video/7511871384092429610", "text": "TT"}
+                ]
+            },
+            {
+                "name": "Penguinelli Cactussini",
+                "section": "2.3",
+                "main_image": "https://i.namu.wiki/i/V57nAY6w6KAGpSwy3qZG3bv9hs0-0-gxh7L2ekhdlRlrS2-vGQrkfUk05nc0PqnG1A4GTLMfKW3Fmn3SEDka1_nnry7H4Fq8CiQx3jebLLwWhbGb-whMsyXG6y-tUoTCzBpJ_oKqt5Rk06aw82Bc-g.webp",
+                "tags": ["Penguin", "Cactus", "Cowboy", "Shoes"],
+                "description": "A character that combines penguins, cactuses and cowboys. The name written in the video is 'Lerululerle', but it is also known as Peng Woolelli Cocksiny.",
+                "links": ["Penguin", "Cactus", "Cowboy", "Shoes"],
+                "videos": [
+                    {"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@alexey_pigeon/video/7479234131231083798", "text": "TT"}
+                ]
+            },
+            {
+                "name": "Hipopotamino Supermaketino",
+                "section": "2.4",
+                "main_image": "https://i.namu.wiki/i/OGctBqIB9aqL3taEDyk3cKPo3fG6k0-SUQ9DxiLA2Ph-gtBzRijSRnLEmJyZ0GP5uIBcPxiqQA1Mk3NTr70DmXgL8666DXBM3cTdMUT9FKuBLBwCgWqT4UqByILyzdFqMncZMr-sO0vqVEdRAgKiqA.webp",
+                "tags": ["Hippo", "Supermarket"],
+                "description": "A character that combines hippo and supermarket. Features a unique blend of animal and commercial elements.",
+                "links": ["Hippo", "Supermarket"],
+                "videos": [
+                    {"url": "https://youtu.be/BqilzSEtEPw?si=M9wFlmiMhhpujML8", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@froutatoudasous69/video/7482696122159385878", "text": "TT"}
+                ]
+            },
+            {
+                "name": "Raccooni Watermelunni",
+                "section": "2.5",
+                "main_image": "https://i.namu.wiki/i/2sYXZkktiXvk7ZEFc1B01EXjCvsqzSLqIGwXnXESIlQr6n-AV5-hRg7txRWueWMbwlVaAUdUctvhEdnJRxoI1dX7JEhRw5FHpcrcC33otD-4SN39oXzBoppfDUoPEYw03A6GsYh2v6LpRX2I-Lcjkg.webp",
+                "tags": ["Raccoon", "Watermelon"],
+                "description": "A character with raccoons inside the watermelon. Features the unique combination of wildlife and fruit elements.",
+                "links": ["Raccoon", "Watermelon"],
+                "videos": [
+                    {"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@alexey_pigeon/video/7483684674124958998?q=Raccooni%20Watermelunni&t=1746261313667", "text": "TT"}
+                ]
+            },
+            {
+                "name": "Cocossini Mama",
+                "section": "2.6",
+                "main_image": "https://i.namu.wiki/i/0ZcoRtVMF-dIGZqVlYYJwM2jxKnuV-Q4mDtJlt_sedOQ5GyCiejImB7fAmhuLqG2kB0tk_mDa6JZraWxOjKcsStjRrhJ1exuqUY84s6mLReUr_spRRoAc923hjBDmwcGVLrA13Rtw6MddNxjas1aMQ.webp",
+                "tags": ["Kangaroo", "Coconut"],
+                "description": "A character that combines kangaroo and coconut. Features the unique blend of marsupial and tropical fruit elements.",
+                "links": ["Kangaroo", "Coconut"],
+                "videos": [
+                    {"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@alexey_pigeon/video/7479775195180453142", "text": "TT"}
+                ]
+            },
+            {
+                "name": "Snooffi Zeffirulli",
+                "section": "2.7",
+                "main_image": "https://i.namu.wiki/i/iRNRUM10Pm2gxXPDeIKYxdsOCGhN53XLfvffdGmi8hBM-q8OHz1RBdOIuHkZauE8lHXl4tOmToG9x_JZ9SJFfr3pfuT3cLGYY6XFWhdfuK6cASeidZQxQSDvSXmlz0zHuW06pVYtyhEIfF8WqxE4mw.webp",
+                "tags": ["Hedgehog", "Pineapple"],
+                "description": "A character that combines hedgehogs and pineapples. Part of the Brie Brey Viccus Dikus Bombus and friends group.",
+                "links": ["Hedgehog", "Pineapple"],
+                "videos": [
+                    {"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@alexey_pigeon/video/7479971522392755478", "text": "TT"}
+                ]
+            },
+            {
+                "name": "Perochello Lemonchello",
+                "section": "2.8",
+                "main_image": "https://i.namu.wiki/i/BTNBr4VW_HCioTXL9COTAto4jg9QzKag2tznHveY_E9SIxvuE18bOisL4DekeZq4Zrv_KwjJd2ooDeebHGPxUR6Z-9tAsy4rGCTyaOzmQt1B8JcRT8-wXNZN81AAJjhV1eE3ErlDhWhFxz5MrOTN3w.webp",
+                "tags": ["Parrot", "Lemon"],
+                "description": "A character that combines parrot and lemon. It is said to like lemon and features vibrant citrus elements.",
+                "links": ["Parrot", "Lemon"],
+                "videos": [
+                    {"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480350013399256342", "text": "TT"}
+                ]
+            },
+            {
+                "name": "Ananitto Giraffini",
+                "section": "2.9",
+                "main_image": "https://i.namu.wiki/i/XEFWrPw4XvJq23zaKQxilZoDi2sBY8W7iGLdLt8kuG-E5U3PKkqHlqkcvdn8lf7wKizWVwai6vbyCFyE4RZobrcCVnmK-h18YCLhdJ7k40hrPKEh9UaewUIajxeBaTUVsR18tNpKwA_vp2Y95NcZPw.webp",
+                "tags": ["Pineapple", "Giraffe"],
+                "description": "A character that combines pineapple and giraffe. Cocosini Mama is a friend, and it is also friends with Kokoshino Reno.",
+                "links": ["Pineapple", "Giraffe"],
+                "videos": [
+                    {"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480615386774375702", "text": "TT"}
+                ]
+            },
+            {
+                "name": "Cocosino Rhino",
+                "section": "2.10",
+                "main_image": "https://i.namu.wiki/i/v4L9gW6feO0Sy8-mZU2D7Asq-KTOmJTLjIItFUf87qbpu6tpisObUmxj3R5FLRgkm_QuVudTtA0ZEYu-ORKSiknj0yy3Zb2t3Bv_LmptQEAtnvvYoi-8IcQ0N6285PXYl56eQwetIh5PpB20J3xWrA.webp",
+                "tags": ["Rhino", "Coconut"],
+                "description": "A character that combines rhinos and coconuts. Features the unique blend of powerful mammal and tropical fruit elements.",
+                "links": ["Rhino", "Coconut"],
+                "videos": [
+                    {"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"},
+                    {"url": "https://www.tiktok.com/@alexey_pigeon/video/7481667086532480278", "text": "TT"}
+                ]
+            }
+        ];
+
+        // Function to create character card
+        function createCharacterCard(character) {
+            const tagsHtml = character.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            const linksHtml = character.links.map(link => `<a href="#" class="link-item">${link}</a>`).join('');
+            const videosHtml = character.videos.map(video => 
+                `<a href="${video.url}" target="_blank" class="${video.text === 'YT' ? 'youtube-icon' : 'tiktok-icon'}">${video.text}</a>`
+            ).join('');
+
+            return `
+                <div class="character-card" id="character-${character.section}">
+                    <div class="character-image-container">
+                        <img src="${character.main_image}" alt="${character.name}" class="character-image">
+                    </div>
+                    <div class="character-content">
+                        <div class="character-name">${character.name}</div>
+                        <div class="character-section">Section: ${character.section}</div>
+                        <div class="character-tags">${tagsHtml}</div>
+                        <div class="character-description">${character.description}</div>
+                        <div class="character-links">${linksHtml}</div>
+                        <div class="social-links">${videosHtml}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to create TOC item
+        function createTOCItem(character) {
+            return `<li class="toc-item"><a href="#character-${character.section}" class="toc-link">${character.section} - ${character.name}</a></li>`;
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            const charactersGrid = document.getElementById('characters-grid');
+            const tocList = document.getElementById('toc-list');
+
+            // Add all characters to the grid
+            charactersData.forEach(character => {
+                charactersGrid.innerHTML += createCharacterCard(character);
+                tocList.innerHTML += createTOCItem(character);
+            });
+
+            // Add smooth scrolling for TOC links
+            const tocLinks = document.querySelectorAll('.toc-link');
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Add character card animations
+            const cards = document.querySelectorAll('.character-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

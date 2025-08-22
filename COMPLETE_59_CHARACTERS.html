@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover">
+    <title>Italian Brainrot Archive S2: Mutation Chronicles (August 2025)</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.ico">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta property="og:title" content="Italian Brainrot Archive S2: Mutation Chronicles (August 2025)">
+         <meta name="theme-color" content="#ff4444">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+                 .header {
+             background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+             padding: 2rem 0;
+             text-align: center;
+             border-bottom: 3px solid #ff4444;
+         }
+        
+                 .header h1 {
+             font-size: 2.5rem;
+             margin-bottom: 0.5rem;
+             color: #ff4444;
+         }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .header-logo {
+            flex-shrink: 0;
+        }
+        
+        .header-logo img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #cccccc;
+            flex: 1;
+            line-height: 1.8;
+            text-align: left;
+            background: rgba(44, 44, 44, 0.7);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            border: 1px solid #ff4444;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .main-container {
+            display: flex;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+            gap: 2rem;
+        }
+        
+        .content-area {
+            flex: 1;
+        }
+        
+        .toc-sidebar {
+            width: 300px;
+            background: #2c2c2c;
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+            border: 2px solid #ff4444;
+        }
+        
+        .toc-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ff4444;
+            margin-bottom: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #ff4444;
+            padding-bottom: 0.5rem;
+        }
+        
+        .toc-list {
+            list-style: none;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .toc-item {
+            margin-bottom: 0.5rem;
+        }
+        
+        .toc-link {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.3rem 0.5rem;
+            border-radius: 6px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-link:hover {
+            background: #ff4444;
+            color: white;
+        }
+        
+        .stats {
+            background: #2c2c2c;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            border: 2px solid #ff4444;
+        }
+        
+        .stats span {
+            color: #ff4444;
+            font-weight: bold;
+        }
+        
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .character-card {
+            background: #2c2c2c;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #ff4444;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .character-image-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #ff4444;
+            padding: 1rem;
+        }
+        
+        .character-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .character-image:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+        
+        .lightbox-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            text-align: center;
+        }
+        
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border: 3px solid #ff4444;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 1001;
+        }
+        
+        .lightbox-close:hover {
+            color: #ff4444;
+        }
+        
+        .lightbox-caption {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .character-content {
+            padding: 1.5rem;
+        }
+        
+        .character-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ff4444;
+            margin-bottom: 0.5rem;
+        }
+        
+        .character-section {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        
+        .character-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tag {
+            background: #ff4444;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+
+        .character-description {
+            color: #cccccc;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            max-height: none;
+            overflow-y: visible;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+    
+        
+        .character-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .link-item {
+            color: #ff4444;
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.4rem;
+            border: 1px solid #ff4444;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .link-item:hover {
+            background: #ff4444;
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .youtube-icon {
+            background: #ff0000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.7rem;
+            padding: 0.5rem 0.8rem;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            position: relative;
+        }
+        
+        .youtube-icon::before {
+            content: "▶";
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+        }
+        
+        .youtube-icon:hover {
+            opacity: 0.8;
+        }
+        
+        .tiktok-icon {
+            background: #000000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.7rem;
+            padding: 0.5rem 0.8rem;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            position: relative;
+        }
+        
+        .tiktok-icon::before {
+            content: "♪";
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+        }
+        
+        .tiktok-icon:hover {
+            opacity: 0.8;
+        }
+        
+        .pump-icon {
+            background: #00ff00;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.7rem;
+            padding: 0.5rem 0.8rem;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            position: relative;
+        }
+        
+        .pump-icon::before {
+            content: "💎";
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+        }
+        
+        .pump-icon:hover {
+            opacity: 0.8;
+        }
+        
+        .twitter-icon {
+            background: #1da1f2;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.7rem;
+            padding: 0.5rem 0.8rem;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            position: relative;
+        }
+        
+        .twitter-icon::before {
+            content: "🐦";
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+        }
+        
+        .twitter-icon:hover {
+            opacity: 0.8;
+        }
+        
+        .footer {
+            background: #2c2c2c;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 2px solid #ff4444;
+        }
+        
+        .footer p {
+            color: #888;
+        }
+        
+        @media (max-width: 1200px) {
+            .main-container {
+                flex-direction: column;
+            }
+            
+            .toc-sidebar {
+                width: 100%;
+                position: static;
+            }
+            
+            .toc-list {
+                max-height: 200px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .characters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-container {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .header-logo img {
+                max-width: 150px;
+            }
+            
+            .header p {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Italian Brainrot Archive S2: Mutation Chronicles (August 2025)</h1>
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="logo - stepblast logo (500 x 150 px).png" alt="Italian Brainrot Logo">
+            </div>
+            <p>Italian Brainrot Archive S2: Mutation Chronicles - A comprehensive collection of new characters from the viral Italian Brainrot series, featuring mutated animals that have gained millions of views on TikTok and other social media platforms. Each character includes detailed descriptions, background music, and direct links to their original TikTok videos.</p>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <div class="content-area">
+            <div class="stats">
+                <p>Total Characters: <span id="character-count">60</span> | Updated on: <span>2025-08-22 09:37:13</span></p>
+                <p>Pump Fun Token 7kpPfkgPS6v8CUgzrzQPpjztXj1sV2rzoB2vDiWtpump</p>
+            </div>
+            
+            <div class="characters-grid" id="characters-grid">
+                <!-- ALL 59 CHARACTERS WILL BE LOADED HERE -->
+            </div>
+        </div>
+        
+        <div class="toc-sidebar">
+            <div class="toc-title">Table of Contents</div>
+            <ul class="toc-list" id="toc-list">
+                <!-- TOC WILL BE GENERATED VIA JAVASCRIPT -->
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Italian Brainrot Archive S2: Mutation Chronicles (August 2025)</p>
+        <p>Complete Character Database - ALL 59 characters from the Italian Brainrot universe</p>
+    </div>
+    
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script>
+        // ALL 59 CHARACTERS DATA
+        const charactersData = [
+    {
+        "name": "Brainrot Archive S2",
+        "section": "0",
+        "main_image": "Twitter logo 500x50031513513513.png",
+        "tags": ["hot", "wiki"],
+        "description": "Welcome to the Italian Brainrot Archive S2: Mutation Chronicles! This comprehensive collection showcases the viral mutated animal characters that have taken social media by storm. Each character represents the chaotic creativity of Italian Brainrot memes, featuring bizarre fusions of animals, objects, and concepts that defy all logic and reason.",
+        "videos": [{"url": "https://pump.fun/coin/7kpPfkgPS6v8CUgzrzQPpjztXj1sV2rzoB2vDiWtpump", "text": "Pump"}, {"url": "https://x.com/rotchronicles", "text": "Twitter"}]
+    },
+    {
+        "name": "Talpa Di Ferro",
+        "section": "1",
+        "main_image": "https://i.namu.wiki/i/RBRReg7SRmjR05LXjkn5hsPXeO7fB1l7An-iAIGCz9XtVE6_Q4SYfdbbJ4EECvxQGNUCF24IXTxJf7dz_tULiYiKUBbaO8_3RSe9qPKRFzH3lSJwpmVBxV87mZ7uMyDqOVZ7cpPXIXpcr75zwK0FdA.webp",
+        "tags": ["Mole", "Cyborg"],
+        "description": "oh Dio mio. Talpa Di Ferro. In grado di scavare qualsiasi oggetto solido, in grado di scavare anche il metallo.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@italianbrainrotanimals01/video/7524020191127211286", "text": "TT"}]
+    },
+    {
+        "name": "Chef Crabracadabra",
+        "section": "2",
+        "main_image": "https://i.namu.wiki/i/-ooQ8A_BOPbfHrm2F30I90pqlQobXBeKbgxLzU3YQRSR61nJkKp3thS5d8jXbI-N61Nt4kLpSkzg_w-LeMh9f3vIh7QJih4JQYc1OfcakMbvLUtBWIjQ7kkgnDUNTSFthACttP5Mb8RwAMUrXtUNLQ.webp",
+        "tags": ["Chef", "Crab", "Abracada Bra"],
+        "description": "Abracada Bravideo|Description Original text (swearing attention)Zazam Zazoom — la tua cena è il tuo doom.Taglia le teste, le frigge nel fango, grida 'maledetti.",
+        "videos": [{"url": "https://youtu.be/aDddm4r4Sr8?si=LDao_xdPNAEjAjVB", "text": "YT"}, {"url": "https://www.tiktok.com/@mammamemea4/video/7511871384092429610", "text": "TT"}]
+    },
+    {
+        "name": "Penguinelli Cactussini",
+        "section": "3",
+        "main_image": "https://i.namu.wiki/i/V57nAY6w6KAGpSwy3qZG3bv9hs0-0-gxh7L2ekhdlRlrS2-vGQrkfUk05nc0PqnG1A4GTLMfKW3Fmn3SEDka1_nnry7H4Fq8CiQx3jebLLwWhbGb-whMsyXG6y-tUoTCzBpJ_oKqt5Rk06aw82Bc-g.webp",
+        "tags": ["Penguin", "cactus", "cowboys", "shoes"],
+        "description": "cowboys,shoesIt is a character that combines penguins, cactuses and cowboys.The name written in the video is the name 'Lerululerle', but it is also known as the name of Peng Woolelli Cocksiny.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7479234131231083798", "text": "TT"}]
+    },
+
+    {
+        "name": "Raccooni Watermelunni",
+        "section": "5",
+        "main_image": "https://i.namu.wiki/i/2sYXZkktiXvk7ZEFc1B01EXjCvsqzSLqIGwXnXESIlQr6n-AV5-hRg7txRWueWMbwlVaAUdUctvhEdnJRxoI1dX7JEhRw5FHpcrcC33otD-4SN39oXzBoppfDUoPEYw03A6GsYh2v6LpRX2I-Lcjkg.webp",
+        "tags": ["Raccoon", "watermelon"],
+        "description": "! Melo Melo melonuchi racconuchi. Racconito watermelonito!Rakuni Kuni Kuni Watermeloney! Melo Melo Melo Nak Rakunucci. Rakunito Water Melonito!It is a character with raccoons inside the watermelon.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7483684674124958998?q=Raccooni%20Watermelunni&t=1746261313667", "text": "TT"}]
+    },
+    {
+        "name": "Cocossini Mama",
+        "section": "6",
+        "main_image": "https://i.namu.wiki/i/0ZcoRtVMF-dIGZqVlYYJwM2jxKnuV-Q4mDtJlt_sedOQ5GyCiejImB7fAmhuLqG2kB0tk_mDa6JZraWxOjKcsStjRrhJ1exuqUY84s6mLReUr_spRRoAc923hjBDmwcGVLrA13Rtw6MddNxjas1aMQ.webp",
+        "tags": ["Kangaroo", "Coconut"],
+        "description": "Cocossini Mama is the result of crossing Kangaroo, Coconut boundaries. A true masterpiece of internet absurdity and creativity.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7479775195180453142", "text": "TT"}]
+    },
+    {
+        "name": "Snooffi Zeffirulli",
+        "section": "7",
+        "main_image": "https://i.namu.wiki/i/iRNRUM10Pm2gxXPDeIKYxdsOCGhN53XLfvffdGmi8hBM-q8OHz1RBdOIuHkZauE8lHXl4tOmToG9x_JZ9SJFfr3pfuT3cLGYY6XFWhdfuK6cASeidZQxQSDvSXmlz0zHuW06pVYtyhEIfF8WqxE4mw.webp",
+        "tags": ["Hedgehog", "pineapple"],
+        "description": "A strange hybrid creature, Snooffi Zeffirulli merges Hedgehog, pineapple into one absurd entity. Their existence defies all logic and reason.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7479971522392755478", "text": "TT"}]
+    },
+    {
+        "name": "Perochello Lemonchello",
+        "section": "8",
+        "main_image": "https://i.namu.wiki/i/BTNBr4VW_HCioTXL9COTAto4jg9QzKag2tznHveY_E9SIxvuE18bOisL4DekeZq4Zrv_KwjJd2ooDeebHGPxUR6Z-9tAsy4rGCTyaOzmQt1B8JcRT8-wXNZN81AAJjhV1eE3ErlDhWhFxz5MrOTN3w.webp",
+        "tags": ["Parrot", "lemon"],
+        "description": "Perochello Lemonchello is the result of crossing Parrot, lemon boundaries. A true masterpiece of internet absurdity and creativity.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480350013399256342", "text": "TT"}]
+    },
+    {
+        "name": "Ananitto Giraffini",
+        "section": "9",
+        "main_image": "https://i.namu.wiki/i/XEFWrPw4XvJq23zaKQxilZoDi2sBY8W7iGLdLt8kuG-E5U3PKkqHlqkcvdn8lf7wKizWVwai6vbyCFyE4RZobrcCVnmK-h18YCLhdJ7k40hrPKEh9UaewUIajxeBaTUVsR18tNpKwA_vp2Y95NcZPw.webp",
+        "tags": ["Pineapple", "Giraffe"],
+        "description": "un uomo enorme, un uomo molto molto lungoAnanito Girafini Ananito Ananito, a huge giraffe, very long giraffe.It is a character that combines pineapple and giraffe.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480615386774375702", "text": "TT"}]
+    },
+    {
+        "name": "Cocosino Rhino",
+        "section": "10",
+        "main_image": "https://i.namu.wiki/i/v4L9gW6feO0Sy8-mZU2D7Asq-KTOmJTLjIItFUf87qbpu6tpisObUmxj3R5FLRgkm_QuVudTtA0ZEYu-ORKSiknj0yy3Zb2t3Bv_LmptQEAtnvvYoi-8IcQ0N6285PXYl56eQwetIh5PpB20J3xWrA.webp",
+        "tags": ["Rhino", "coconut"],
+        "description": "Rhino Rhino cocosino! Coconuchi rhinuchi.Kokoshino Reno. Reno Reno Cocosino! Coco Nutchi Linucci.It is a character that combines rhinos and coconuts.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7481667086532480278", "text": "TT"}]
+    },
+    {
+        "name": "Piccione Macchina",
+        "section": "11",
+        "main_image": "https://i.namu.wiki/i/BwDk3nmGISAXgTiPrZ_xv_boeRxcSuS8df0LZSORooPS8pH_D6a8fh1YuSsi9ubQDFRR1Hldx6wTa6AGhEdDyCYc-LwfJR5AZYuIIGYozU1Is9oIUCbM_IwHINaUt-lcNQ_r3Mou3VsYX610r67ltQ.webp",
+        "tags": ["Tesla Cyber \u200b\u200bTruck", "Pigeon", "Air Force"],
+        "description": "Tesla Cyber ​​Truck,Pigeon,Air Force|Piccione macchina. Picci picci ad ore macchina SBADABIM, SBADABIM. Scarpe bianche da spingipista.Peach One Makina.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://youtu.be/TGlLwbsqtnI?si=WtKWcRgZmesUFZto", "text": "YT"}, {"url": "https://www.tiktok.com/@piccionemacchina/video/7495646680625188151", "text": "TT"}]
+    },
+    {
+        "name": "Cacasito Satelito",
+        "section": "12",
+        "main_image": "https://i.namu.wiki/i/lMagTdMC09r2YqTamoYDaPil0k6vhiBbw_I7eCSBsZzlhcxefPQF5v4Aw4MJKdrS0YopcxVTHMU1kbDmfW-60QRv1i3-7E49sLG3SJRzHZh1ZkIp06_A5K-prO6QxhxUaH8zsFKm9FLpxi02ezs06g.webp",
+        "tags": ["Rats", "satellites", "shoes"],
+        "description": "shoesCacasito Satelito, con il muso allungati nei suoi stivali sta spedito nell'orbita è un fulgo nel Cosmo gira divertito. Oh, Cacasito Satelito.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@betacrusader/video/7478856513004588310?is_from_webapp=1&sender_device=pc&web_id=7467470199436920327", "text": "TT"}]
+    },
+    {
+        "name": "Armodillo Cocodillo",
+        "section": "13",
+        "main_image": "https://i.namu.wiki/i/TLCR3x-A3hPFfLrJk-pdSW6ONeOdUvXOvM1gJGJO49L4S5g1W4GDjqHEMEjlVIi8lonj1NKF-6AfwE8Hnh1wSzKWVrXK-AmLcfCJTZQWsTzuxXCMuSA-lCnId-f_n9Vdbz7IMND0_0F8Lkdi41EjQA.webp",
+        "tags": ["Armadillo", "coconut"],
+        "description": "Coco coco coco, aaaaaaaaaarmodillooo. Un uomo forte, impenetrableArmodilo Coco Dilo, Cocoococo, Aaa Aa Aa ArmadilloIt is a common Armadillo in the coconut of the desert beach.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480529480231013654", "text": "TT"}]
+    },
+    {
+        "name": "Peachi Foxilini",
+        "section": "14",
+        "main_image": "https://i.namu.wiki/i/ZdtE2T7349cYANW4jnHIKswkqi6QKwXjWg63NXjNtjPsWcBL_FvoEsj8CJckIQ3LXxDbXlyr6i7MmFRczMJM58OGepxO9BvSPMa8i414SKszSZK0J3JAvUfY3EP83OXSnDbzkbmJLQC94QIW4fUYWQ.webp",
+        "tags": ["Fox", "peach"],
+        "description": "Sweety Foxy Foxicini. Frulli Frulli Furr Furr Furr.Peach pitch flapsilini. Sweety Foxy Foxychini. Prulie Pruli Furu Fur Furu.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480615386774375702", "text": "TT"}]
+    },
+    {
+        "name": "Ananasita Owlita",
+        "section": "15",
+        "main_image": "https://i.namu.wiki/i/06sEII7f6gg8rszKsJyi9dAjZvu24JAXiv_TSvm3apXmwAbQSWOdHAly3oWdXCty0SDRLY0pSNtQSpWHYaopDwa99Tk0w7_tHE63Zmx98hzpIJDkW37oJQvdpA4o7Q5TV--HBaW20Rr_t2iIuQDrDQ.webp",
+        "tags": ["Fine Apple", "Owl"],
+        "description": "A strange hybrid creature, Ananasita Owlita merges Fine Apple, Owl into one absurd entity. Their existence defies all logic and reason.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480697963325426946", "text": "TT"}]
+    },
+    {
+        "name": "Blueberrini Tatticini",
+        "section": "16",
+        "main_image": "https://i.namu.wiki/i/GLwnNMbbikOm5Ahkktm_0J_PjalUY5SQCg1XFGBS66hqHknTBK4NLrd2BIYr124ddy82mrqwhT6Y8O8_jNFNAuqZ2wzkRu9DMWWzGLBJTlGviJfCFdcSJGuxUmYZ2OFb6VfDthmveaGzhA0qp-osiA.webp",
+        "tags": ["Bear", "blueberries"],
+        "description": "Berry Berry Blueberrelli. Arrr arrarr Tatti Daddy.Blueberini Taticini, Berry Berry Blueberry. Arryar Tati dad.It is a combination of blueberries and bears.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480615386774375702", "text": "TT"}]
+    },
+    {
+        "name": "Quivioli Ameleonni",
+        "section": "17",
+        "main_image": "https://i.namu.wiki/i/Ll1We4qAtnsKHoVLwhBYVQxl8cfjoNRj9ZCePJ8jq7amn6wFhHuic7VhW3Fh5D94fU-6C7kScDD1MIThHDI9ZOD4-HojienSsc7K_s6zfUn_SE9aVWBjmFGLhfjY_IXSe_7dRO2oPuMkXFYmfzxAmw.webp",
+        "tags": ["Kiwi", "chameleon"],
+        "description": "Tutti Frutti Ameleonni. Questo bello ragazzo è solitamente verde, ma può cambiare in modo irriconoscibile.Quivioli Ameleoni Tuti Fruit Ameleoni.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480615386774375702", "text": "TT"}]
+    },
+    {
+        "name": "Mangolini Parrocini",
+        "section": "18",
+        "main_image": "https://i.namu.wiki/i/RERXQ2cL6zzeS5qOMdBv44TSFNjrrvTGgIJpz2_NpJbnifuTUZwSUNaqXPcPIbEFRDQOz0tvd6b1S3Ugz8eVqM1UNtCE96dWQdVq8fEAk1YrotJvwrOZaXjTL0oDVCasNnW8EU9zNn20vCXawk8WnQ.webp",
+        "tags": ["Parrot", "mango"],
+        "description": "Carr, carr, carr. Parri Parri Parroneli. Chupi papi pup charello.Manggoli Farochini. Car, car, car. Paris Parnelli. Chufi Papi Puppy Sharelo.It is a character that combines parrot and mango.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480961111056026902?q=crocodilo%20Ananasino&t=1749735363257", "text": "TT"}]
+    },
+    {
+        "name": "Crabito Cocosito",
+        "section": "19",
+        "main_image": "https://i.namu.wiki/i/5EGiNlkMbsiKSwdZh9Fu5CVoKag2zTjD7RwYr8Gc5o7ECiehGtOeHUdPUa-Sz178y3gPSeH2AAqGXrSm42hZyBPXWqM_hSHDLCFJbZJ7Ug8tcoDOLylFEDB7FToZ8bDL5jAmWxvQvHYJUVLKFkCkYg.webp",
+        "tags": ["Crab", "coconut"],
+        "description": "Crabito Cocosito. Artigli affilati e protezione afidable. Lo rendono il leader indiscusso de la costa.Chic Chic Chic, Krabito Cocosito. Sharp toenails and reliable protection.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480529480231013654", "text": "TT"}]
+    },
+    {
+        "name": "Don Don Don Satur",
+        "section": "20",
+        "main_image": "https://i.namu.wiki/i/oviO35sPPBQZnWkJDUXLUhblyIb6C2StNmhWbV2ruotns5tdP3x0KaB59oaWqcli9ME6p8bO0vBE1agLlsIXf5vJRVPJopuiglh5bO08r24tIiSt8_-jFCpXTeWAbi-dDlJJ2DfGUhaCaFTQ5bau3w.webp",
+        "tags": ["Confectionery", "World Cup Trophy", "Mate Cha"],
+        "description": "Mate ChaDon don don satur, La galletita sala da col bastone dalle pampas argentine arriva all'avia. Crack un colpo e i tuoi snack sono briciole.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@drigobreo/video/7498851217775283462", "text": "TT"}]
+    },
+    {
+        "name": "Bombombona Pecorona",
+        "section": "21",
+        "main_image": "https://i.namu.wiki/i/ehbs2e5XuC14h-W0P_MlC7DlKWn_y4oT-Co2Ywjd7g98MtpklFb24IaAY2IFT3m2-i6RuCvJ6Lwr32tGDdMXJdBrWFvvR8eODhsz0q-QkfUUxmEF9AQn8pANs5VSLswP_JtWilnjH5QTe8Lp_G18OQ.webp",
+        "tags": ["Sheep", "fighters"],
+        "description": "Spring Spring is called a friend with Beanie Gugini.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@.homus_dus/video/7488406183280151830?q=Bonombona%20Pecorona&t=1749953611066", "text": "TT"}]
+    },
+    {
+        "name": "Suricatelli Bananelli",
+        "section": "22",
+        "main_image": "https://i.namu.wiki/i/ObUe1rtGWhobNv8AiNlruAIOd2I8Y3xHWpIdTeiq4housgn2nnxfRi3DBhaXxWcE9EjCQsiJ9Bzq_nGXAPrqobOI7DtXAXRndS3rw8pdKTC_Ayv-Gtq5FsD9GGnsHzAQWx55lOB4ZGCyePRrspJkVg.webp",
+        "tags": ["Banana", "Meercat"],
+        "description": "Suricatelli Bananelli is the result of crossing Banana, Meercat boundaries. A true masterpiece of internet absurdity and creativity.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7484031429903420694", "text": "TT"}]
+    },
+    {
+        "name": "Burballoni Watermeloni",
+        "section": "23",
+        "main_image": "https://i.namu.wiki/i/7v6Con407sFvtCxiE5xhGKPHRevP4hYKOTfq48sXW7nODFe3JN2ar9diiv9_vtov75kykC7KeUOyaTJsu9_rpNtCuxDnqbIwq-hdLzjOL2L2gxg1zF3wZyRaC5q17q0uU0CoWyZGZTQtFBTUzRzwaA.webp",
+        "tags": ["Watermelon", "copybara"],
+        "description": "Burballoni Watermeloni is a unique fusion character combining Watermelon, copybara. This bizarre creation embodies the chaotic energy of Italian Brainrot memes.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7487552274701651202", "text": "TT"}]
+    },
+    {
+        "name": "Tirilikalika Tirilikalako",
+        "section": "24",
+        "main_image": "https://i.namu.wiki/i/vQ6etpeO2D_4-4UosX4he9ViDCepWP8nd6TWJ2z4Eu3Atz_ZZdpDx44neLtULWuT334V5iHhcQFMbbwCrxx9qUesd2l0di2N00TtvcyMQEAZFeoZ4ZNWzo8oQob5bOKLz-vo2BnXFU46ybY6sjzJhQ.webp",
+        "tags": ["Chicken", "outdoor unit", "cyborg", "Sunset"],
+        "description": "cyborgTirilikalika. tirilikalako. era un pollo con l'aria condizionata nel deserto che camminava alla ricerca del Frigo Camelo buffo fardelo e dell'Lirili Larila.",
+        "videos": [{"url": "https://youtu.be/lCCsmKZeTC4", "text": "YT"}, {"url": "https://www.tiktok.com/@marcks.amp/video/7477044341672889605", "text": "TT"}]
+    },
+    {
+        "name": "Pippi Poppa Pippo Peppe",
+        "section": "25",
+        "main_image": "https://i.namu.wiki/i/PGJyTrm05uSxrY2aicm3Q_zjApp2tkLc6YVylyIgR5j4RNAzJvaznzH2hqPD9ll2AX84HtfkgCBF4sO6xWaiqHaxpACunl7l5bKhAg8zZbsoGhrMi5rWnr2nZ0meopalV_C_HJXy1mxfU4f5ZrOd0A.webp",
+        "tags": ["Armadilo", "Earth", "Foot", "scientist", "Pigeon"],
+        "description": "Pippi Poppa Pippo PeppePeppopa Pepo Pepe[Rarely used image ▼]Armadilo,Earth,FootArmadillo,scientist,earthPigeon​​BGMВ последний разvideo||Pippi poppa, Pippo Peppe, palli di porcell...",
+        "videos": [{"url": "https://youtu.be/60JWzOfj0DU?si=KqEuOI5lTok_ZZ8e&t=44", "text": "YT"}, {"url": "https://www.tiktok.com/@__chenesacc__/video/7474301496914464022/", "text": "TT"}, {"url": "https://www.tiktok.com/@reisonbs/photo/7475367638131019030", "text": "TT"}]
+    },
+    {
+        "name": "Robertooooo",
+        "section": "26",
+        "main_image": "https://i.namu.wiki/i/z7l5DiSPxZG0lkoZ5n2VLhYauOr1Ugrn2KJ_3KnzRod9WZkIST4NCqP1DEYZcT2VgYYmjH7ffRS4DJYVBqZVJiKg5_p3ICnDi5cVQeimrTmiqWA0INQP6j9jYj8P2Erpoi-yQ3LZ-70IMHuNrTrYiQ.webp",
+        "tags": ["Dwarf", "glasses", "gelato", "But I am shedding gelato."],
+        "description": "gelatoRobertooooo. Robertoooo. Robi. Robinucho.. Robertoooooo.Roberto Ooh Oh. Roberto Oh Ohhhhhhhhhhhhhhhhhhhhhh. lobby. Robbi Yukho. Roberto.It is said to be a friend of Mateo.",
+        "videos": [{"url": "https://youtu.be/Fttst9dG6Ko?si=yqfex2XsV3LTiEG1", "text": "YT"}, {"url": "https://www.tiktok.com/@pollonavale/video/7492031262090300674", "text": "TT"}]
+    },
+    {
+        "name": "Octo Cocosini",
+        "section": "27",
+        "main_image": "https://i.namu.wiki/i/23ulWjJwluiRWjiLLjVIV-hzgwvyZ2ueK_yp_vngocBsRs7gUruVHZjlIL5ZN-GwJUuyKluzSvV7r5rQW1VXz4FDKYkGvUnBUlsfNCwlqDsYDvr7t700Dk80GnV4vqaXUTgVY3h9MWQVB1gTJvsypA.webp",
+        "tags": ["Coconut", "octopus"],
+        "description": "Octo Cocosini is the result of crossing Coconut, octopus boundaries. A true masterpiece of internet absurdity and creativity.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480615386774375702", "text": "TT"}]
+    },
+    {
+        "name": "Elefantino Frigorifero",
+        "section": "28",
+        "main_image": "https://i.namu.wiki/i/qdf1X5cwaV8092KsiXKcCzR2YUa0yj0XTPK2v4FDDPDONND0EVLQkEYlcwa1W59u9jO2suIXkSkDAYA6_UmjKPwgsHr5CBvumd1moMzZBqqK6gSlzvot7LZGzx8PpLUDf1jiSTGYNZ6E0A-EznwkzQ.webp",
+        "tags": ["Elephant", "refrigerator"],
+        "description": "A bom Bata Ta! El Elefantucci Frigoriferucci.Elevantino Prosero, Feng Batata! El Elefantugo Proriferucci.A character that combines elephants in the refrigerator.Fires a lot of cold ice from your nose.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7485902710668086550?q=Rhino%20Toasterino&t=1746259755312", "text": "TT"}]
+    },
+    {
+        "name": "Tigrrullini Kiwichini",
+        "section": "29",
+        "main_image": "https://i.namu.wiki/i/FkVLDK9Jfk9umWgY-7WR2HW8FQL5vvZFYmA_1f2eGoEophvQlgaOKEM0wFc_uTdxTIE0GFQZ_oLV0UsofucnnZd8ZzYvDRgy4tD1vK7HrrwNgDwpdAWSz1GmTesZlgy-1RhK3rU8nESdyuizxleebg.webp",
+        "tags": ["Tiger", "kiwi"],
+        "description": "Tigrrullini kiwichini. Arrr arrr. Kiwishuchi tigru tigru tigrulli ello.Dabudai. Tagulini Kiwichini. Eoheung. Kiwi numerical tagu Tigru Tigrillier Elo.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7482717314975042839?q=Tigrrullini%20Watermellini&t=1746260679921", "text": "TT"}]
+    },
+    {
+        "name": "Tigrrullini Ananasini",
+        "section": "30",
+        "main_image": "https://i.namu.wiki/i/ycCDMThlXW1qnD6dj30k4vFN_-l2zQml9DypM3nWxtFrbwZetrp4TPomUdHq1GEvYEM5kgXDuyV2M4QuPVCApqo5KAfGG_IfZGk4yLFTFoNJm-3_jY05u7dCtzbJdHkvIlAUBo_JCiU0SxZutVMNOw.webp",
+        "tags": ["Tiger", "pineapple"],
+        "description": "Yananasuchi tigru tigru tigrulli ello.Tigrilli Ananacini Juheung. Yananasu Tigu Tagru Tigrilli Elo.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7482717314975042839?q=Tigrrullini%20Watermellini&t=1746260679921", "text": "TT"}]
+    },
+    {
+        "name": "Froggliatto Limitunni",
+        "section": "31",
+        "main_image": "https://i.namu.wiki/i/bBXQGYKhIWnv2_PSP2cnr3VVoNr32wRd3ZWxoCxVmIyqNstdW4YP-AG6PxpETuZ-JSIqrzrro3r28jteVp1zdhhpJdL-ZGBELJ2bwok9EN-9pWQvhZiLReMMr3AC_Dw3JzaVIYtu6_Y1YXhH2Wb2GQ.webp",
+        "tags": ["Frog", "Lime"],
+        "description": "Gwa gwa gwa.Professional Rato Rimyuni. Doggulgulgulgul.A character that synthesizes lime in frogs.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480697963325426946", "text": "TT"}]
+    },
+    {
+        "name": "Frugino Frullatorino",
+        "section": "32",
+        "main_image": "https://i.namu.wiki/i/cm2gYyEs5zTXyLNujULqVN3iTQlJFAGU37dlvi95-rphqTBOlc1HZ7C07Uo1R4wLsjeFW4JMTBkPBYGa660h7wH844glRqeSWJtA_4URlZvYJk5rxrA1LPUZXVe0XZJ6Eif-tUTy4_ZNT8nuOMxuTw.webp",
+        "tags": ["Frog", "mixer"],
+        "description": "A strange hybrid creature, Frugino Frullatorino merges Frog, mixer into one absurd entity. Their existence defies all logic and reason.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7485902710668086550?q=Rhino%20Toasterino&t=1746259755312", "text": "TT"}]
+    },
+    {
+        "name": "Buffallo Cactusuffalo",
+        "section": "33",
+        "main_image": "https://i.namu.wiki/i/xSxdfvZaJWj16Jzu_vkYY7VJILR65iE908BFCRCJV7wWnCZ2AXbMohVWoR3jE1-ghM9ObJC4NsBaDI3rd-981u5hAl-8g_Fn0MIhrHs9ZstjZnC2ZvDjoNxtpyjod4LL4MDCbafmMop81V-QZvkPFw.webp",
+        "tags": ["America", "cactus"],
+        "description": "Buffallo Cactusuffalo represents the pinnacle of meme evolution, blending America, cactus into a character that's both terrifying and hilarious.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7484598308195896599", "text": "TT"}]
+    },
+    {
+        "name": "Crocodildo Taxiccino",
+        "section": "34",
+        "main_image": "https://i.namu.wiki/i/O3NDyv-zC00OFnPztL6dUlHfcmGGmx4XrsPiV62oGcMyGEUhXKv2MuUZYeoA2PvlCDa01Ehiq5XsG3qhFxBCPL2NM9nsMZsLRg8a51qwr_e_F-R8ToMAlnERNaFNwHzUK3hU3Q5DqOfBr3XZjb1fiQ.webp",
+        "tags": ["Taxi", "crocodile"],
+        "description": "Hey taxi taxi taxiuchi crocoduchi. Crocodildo Taxicheli!Crocodido Taxi Cino. Hey, Taxi Taxi Taxi Uchi Croko Duchi. Croko Dildo Taxi Celly!",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7485309216513707286", "text": "TT"}]
+    },
+    {
+        "name": "Makakini Cocosini",
+        "section": "35",
+        "main_image": "https://i.namu.wiki/i/HC9nSRNo2sAhwJU7UovZeOTIC7OSwLQ9-DQ-Ito2f26dSYYogxGu8M5t15BP811C6dahH5TPEobbxhThOObhYMAfyscrTtkjTd8ftzqOHwqe5jLuLnKnloi2SHt3lrVAp3sjG44JkHPNU--OyEvA7A.webp",
+        "tags": ["Macak", "coconut"],
+        "description": "Wah! Wah! Wah! cocosuchi monkey monkey monkey uchi.Makakini Cocosini! and! and! and! Coco numeric monkey monkey monkey.Macakini Ananacini at the bottom is the subspecies of Macakini Bananini.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7482171877494967574", "text": "TT"}]
+    },
+    {
+        "name": "Makakini Ananasini",
+        "section": "36",
+        "main_image": "https://i.namu.wiki/i/IHkoXe0f0XYBh5WJGyE6QBRAE8oeobuduUnvHGJqgKZNQnUYprHQn5Q_7tpuy1zUpypjhIaedWufAJZM1UJtwIpEPND4sN-HHkMyut9bnw3ehnmM9f1icoesgbuZiAxDDVwU0Uh3MTdTCPa3RzLt7w.webp",
+        "tags": ["Macak", "Pineapple"],
+        "description": "Wah! Wah! Wah! ananasuchi monkey monkey monkey uchi.Makakini Ananacini! and! and! and! Anana numeric monkey monkey monkey Uchi.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7482171877494967574", "text": "TT"}]
+    },
+    {
+        "name": "Strawberrelli Flamingelli",
+        "section": "37",
+        "main_image": "https://i.namu.wiki/i/5yCKl7nZdFjwLvrNqoSilkXxYx9NCCsk855LsGuIuryICxU6kHFwc4ZrivzpLlVv24f3WBwPt9Euz5Pv1nDn2T8T1z-e8HtzNie2BWwA5PdnSzLL_UyHFcfrXKJm4Nl8L_UvjvMzvYjvM77SG0YiQw.webp",
+        "tags": ["Red", "strawberry"],
+        "description": "A strange hybrid creature, Strawberrelli Flamingelli merges Red, strawberry into one absurd entity. Their existence defies all logic and reason.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7480615386774375702", "text": "TT"}]
+    },
+    {
+        "name": "Svinkrili Bombacini",
+        "section": "38",
+        "main_image": "https://i.namu.wiki/i/MYDF8ZlPIlmDTeRzeSWSKxqv154z8FQfwnOlKZOiSVA7saMexVyIdunh9Ix8QXR4XPiIhh2_WgO4nCIXjbDgB-47TH7dr8InlUlLk98vNrmYj68yPGRL8OpOGdA0ZFtCYm039pi5_X-mWaTFJHfVoA.webp",
+        "tags": ["Pig", "F-15"],
+        "description": "This peculiar being known as Svinkrili Bombacini combines Pig, F-15 in ways that shouldn't be possible. Pure Italian Brainrot magic.",
+        "videos": [{"url": "https://youtu.be/YOVYo3Zbens?si=hLag-0a5Bt44M2qo", "text": "YT"}, {"url": "https://www.tiktok.com/@reisonbs/photo/7474617339795803414", "text": "TT"}]
+    },
+    {
+        "name": "Gingobaló Gingobalì",
+        "section": "39",
+        "main_image": "https://i.namu.wiki/i/FQoioH7ttKI5cKAP3--MCLbXuKI3wzSqOlnlCBmV6R-KgnkJmb5Rq3v7J2YWCBczOzwSlivX92vrOhOJ3GY37HIxrpPdv93iWq5l6wbqqNtLIesJKVN5Pjqu0tx_xlzA4MFrb1X5K4y6pnRwOgBdKg.webp",
+        "tags": ["Tomato", "wild boar", "Hasa", "watermelon"],
+        "description": "Gingobaló GingobalìJing Go BaliTomato,wild boarHasa,watermelonBGMMississippi Fred McDowell - You gotta movevideoBoth pictures are used, but the first picture is a bit more popular.",
+        "videos": [{"url": "https://youtu.be/mtlVSedpIRU?si=oE0Mtl3Tm6N5Lc_6", "text": "YT"}, {"url": "https://www.tiktok.com/@reisonbs/photo/7478016262946245910", "text": "TT"}]
+    },
+    {
+        "name": "Batatoso Peloso",
+        "section": "40",
+        "main_image": "https://i.namu.wiki/i/GmviyO6HN3m97IRWtMY0Qjhu1FUmvXJOtBplS06G78ufwhM1Czdbpi-gGpg7wvPyq7XKx6_H_S7ImkCUOLKeEtETvb_ExaOdX-Bo2vP0M4v8usr78QkC48z5F1XmW2Qmzq-Ta76l00VZPx9eMEOLfg.webp",
+        "tags": ["Bears", "potatoes", "sandals", "feet", "Skividi Toilet"],
+        "description": "sandals,feetBGMDark Soul -Gwyn, Lord of CindervideoBatatoso Peloso, Strambo e Guloso. L’orso patata andava in suo mango, mango.",
+        "videos": [{"url": "https://www.youtube.com/watch?v=Nvv9w-UPuSY", "text": "YT"}, {"url": "https://www.tiktok.com/@ofuscabreno/video/7476874298674859319", "text": "TT"}]
+    },
+    {
+        "name": "Pipi Avocado",
+        "section": "41",
+        "main_image": "https://i.namu.wiki/i/9fQuOzoEbEqId4bAL4OZYQpcqAy2O_CFjzrMZkbnF0J4aA_v8ITk9FeMOqRf3_Un57iP5Q5sBD6I1Qj1cT4zV5ArtaECZ6EErPIxFd9kp-4CVPC1iTyL7rTQ2kswTgJpLZXqlJ3AEDJvhvOwSfh4ag.webp",
+        "tags": ["Avocado", "Capybara", "legs"],
+        "description": "Man'slegsPipi! Avocadoooooo! Aaaaaaaaaaaa! Ist'une creatura caaaaaas!Phi Phi! Avocadoo Oh Oh Ohhhhhhhhhhhhhhhhhhhhhhhhh Ahhhhhhhhhhhhhhhhhhhhhhhhhhh! This is a creative creature.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@lifewatching1/video/7483195411528699158", "text": "TT"}]
+    },
+    {
+        "name": "Ciuf Ciuf Treno Pervertito",
+        "section": "42",
+        "main_image": "https://i.namu.wiki/i/z_MTjNaIiDG3ET8LL07rV9vLzrluKEjnGozekQxS8HqTCCmKgpyUTsaQJqxcm5g_8rRMGVsnrEJqeowieAn_rYcx_HpElWV5znMLmqtNJyQdcQMBL4xnGQBPRAFKlASjW80cjSAgdgGOVIXrLhtoPg.webp",
+        "tags": ["Electric locomotive", "face"],
+        "description": "faceCuif cuif. Lui Treno Pervertito. O grande, questo trenino bizzarro e birichino ha sempre la butta pronta.",
+        "videos": [{"url": "https://youtu.be/BqilzSEtEPw?si=M9wFlmiMhhpujML8", "text": "YT"}, {"url": "https://www.tiktok.com/@pollonavale/video/7485479338302065942", "text": "TT"}]
+    },
+    {
+        "name": "Pipi Banani",
+        "section": "43",
+        "main_image": "https://i.namu.wiki/i/mmJICOtH9rQcDigI0uwr-zg5R7gGRAt3zmTG0X8yjdd7Cbsmenrx7Nq100CugDSlOsCcL_r3X34-rGqK8-8_lFU62B4Bw818EiyA5ZcXqW5zdXyh-dWZQtm4iBJh_J7vlx3nSmCD6VbOtDNw5lXAJw.webp",
+        "tags": ["Penguins", "bananas", "feet", "shoelaces"],
+        "description": "feet,shoelacesPipi. Banani. Uok, uok, Ist'une criatura que habita de sen severo, quartas like banana.Phi Phi. Banani.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@lifewatching1/video/7482920323734719766", "text": "TT"}]
+    },
+    {
+        "name": "Chimpanzini Cocosini",
+        "section": "44",
+        "main_image": "https://i.namu.wiki/i/yHBLloZsfh7J_ZgH5OUR7tLvmnhrA6eTJpkiXhX40q6bn71Ukd5MQ72Sxq0W8I2-hDIr8VGEi0gwZD4aSDbpXGgnHLxZBHnKZHiVax018O4D9-yBjVMNF7BEsLxp6rtiCFDxhG_SLptM6-OYSvFikQ.webp",
+        "tags": ["Chimpanzee", "coconut"],
+        "description": "Wah. Wah. Wah.Baby Jenny Cocosini, Wow. and. and.Cocosuchi, monkey, monkey, monkey, uci.Coco shame, monkey, monkey, monkey, Uchi.Supplete Kini Cocosini, Wow. and. and.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7481225648258731286?q=Chimpanzini%20bananini&t=1746936184550", "text": "TT"}]
+    },
+    {
+        "name": "Chimpanzini Ananasini",
+        "section": "45",
+        "main_image": "https://i.namu.wiki/i/a44rmjDuhEIS6yXsv10a9n2OXqSmnrjwn6FCu2s-iTm47GD-K7NMnaTcpI0jb3I_NKJ8-cDWwYnVw219PM32hYspUXimGOmiQatCB2psmqoxfk9zqAj3XCyUMbjtJSz1Swk0uSqB4xM1HbdJksxedQ.webp",
+        "tags": ["Chimpanzee", "pineapple"],
+        "description": "Wah. Wah. Wah.Baby Jenny Ananacini Wow. and. and.Ananasuchi, monkey, monkey, monkey, uci.Anana shame, monkey, monkey, monkey, Uchi.Supplade Ananacini, Wow. and. and.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7481225648258731286?q=Chimpanzini%20bananini&t=1746936184550", "text": "TT"}]
+    },
+    {
+        "name": "Il mastodontico telepiedone planetario",
+        "section": "46",
+        "main_image": "https://i.namu.wiki/i/m-6u8S7hjojNhPnA6cf7AhDpd_MaEhkVKQ84Phnt1MppzVxWzrWrIUXr5oJ7JxttXPHffF59DfAqKA1H3YEvKj0u5uS8bdiG2rYE1KNnSBCSGAx1s76nKDvAtNnoRlCKLIz80m9qtAf9FxE8VBZsLg.webp",
+        "tags": ["Television", "Foot", "Earth"],
+        "description": "EarthBGMThe X-FILES OpeningvideoIl Mastodontico Telepiedone Planetario. Nel vortice del delirio cosmico scende giù il piedone schiacciante e simpatico.",
+        "videos": [{"url": "https://youtu.be/11tafy4pAm0?si=Y1RX_YWBNmNwogYh", "text": "YT"}, {"url": "https://www.tiktok.com/@malacoabalabu/video/7477306944836029702", "text": "TT"}]
+    },
+    {
+        "name": "Simoneeeee",
+        "section": "47",
+        "main_image": "https://i.namu.wiki/i/gi-dPFflfNhLBvqTAhlxblkPNkbqXRM4LPSGHAtGdIQxusiDBQ7ZMYaTWwr9g5Xb5jpOYUH4Ngld-HgecyTbtRKz5qtzeV1iPoIWlFpzfSvb4aD0UZ0m6uuvq6uUTTV4eIVEIv17EJ0HGz4LTdTUtA.webp",
+        "tags": ["Flaming", "feet", "glasses"],
+        "description": "Simoneeeee is a unique fusion character combining Flaming, feet, glasses. This bizarre creation embodies the chaotic energy of Italian Brainrot memes.",
+        "videos": [{"url": "https://youtu.be/S6BJoeSoeJg?si=uwdHtdOKEyE0bb4l", "text": "YT"}, {"url": "https://www.tiktok.com/@pollonavale/video/7490918895641971990", "text": "TT"}]
+    },
+    {
+        "name": "Yang Mau Masuk",
+        "section": "48",
+        "main_image": "https://i.namu.wiki/i/KuypG5IRnm83MQ2MyvCZJvOXeo0dGzanq4DRHWru5P62n_aP7XL9m7D-VsCLs6I9eusfqqyCsPhsrNYCHZIVvWgaepjjCD0iqJN_MIUPWTWDPWQznX9HCP4iAAHunkLT_1j6uSCvdBO7xt5OOHZzfA.webp",
+        "tags": ["Subscribe", "good", "mobile phone"],
+        "description": "Yang Mau Masuk represents the pinnacle of meme evolution, blending Subscribe, good, mobile phone into a character that's both terrifying and hilarious.",
+        "videos": [{"url": "https://youtu.be/YOVYo3Zbens?si=hLag-0a5Bt44M2qo", "text": "YT"}, {"url": "https://www.tiktok.com/@user8078559280/video/7492275796497763639", "text": "TT"}]
+    },
+    {
+        "name": "Coccodrillo Formaggioso",
+        "section": "49",
+        "main_image": "https://i.namu.wiki/i/SKCSJxfa7VRBheQs8BwOpnPBYG3kN6kfGp52pVXgS9RCbIVQLPCe9JZ-v_8EWROrQbKqGk956_St4SH2s5hTjFFmnZLmnNVqz8Al4Fzm12kpr-36eaEWdCwQ_f3FBrWnsAAxyu8zCUIpcx4yjAMSVQ.webp",
+        "tags": ["Crocodile", "cheese", "arms", "Soviet", "Union"],
+        "description": "Humanarms,SovietUnionCoccodrillo Formaggioso. Fa parte dell'Unione Sovietica e gli piace tagliarsi le unghie dei piedi e mangiare... cartongesso.",
+        "videos": [{"url": "https://youtu.be/BqilzSEtEPw?si=M9wFlmiMhhpujML8", "text": "YT"}, {"url": "https://www.tiktok.com/@ayoastrex/video/7476209910569569558", "text": "TT"}]
+    },
+    {
+        "name": "Raspberrini Rabbitini",
+        "section": "50",
+        "main_image": "https://i.namu.wiki/i/4uksOIkT3iE9UBFsPhNNs1kL2ugTPghJzWc13jEu-gg1wNAaP_cCnrixcquOl96DwwkmASesF3jq-6Fx0r3MVrRPv37WQCRqG7JbIxvA7RyyZdaDDa4ADJ2Ego-gfdK9o_BZEmTA7sjQ67BqHjIqOw.webp",
+        "tags": ["Rabbit", "Raspberry"],
+        "description": "A strange hybrid creature, Raspberrini Rabbitini merges Rabbit, Raspberry into one absurd entity. Their existence defies all logic and reason.",
+        "videos": [{"url": "https://www.tiktok.com/@lifewatching1/video/7484765230581517590", "text": "TT"}]
+    },
+    {
+        "name": "Cappuccino Babuino",
+        "section": "51",
+        "main_image": "https://i.namu.wiki/i/w0gHwXam7RJ1fGeDNzRI5N5MzjrSmBe4_13gcv8hGAvSWvUUx5whRdWm7WghPH2RGhu78EeviRrAFQCPusoLFwcisL0gMLK2xvraquD5ZsS_e30Vxj2RAw9Pec0Qru0_0V4-5isIBdajulc0htufiw.webp",
+        "tags": ["Gacoon", "Cappuccino"],
+        "description": "Cappuccino Babuino is a unique fusion character combining Gacoon, Cappuccino. This bizarre creation embodies the chaotic energy of Italian Brainrot memes.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@alexey_pigeon/video/7478320807693798678", "text": "TT"}]
+    },
+    {
+        "name": "Bombardiro Cudcudach",
+        "section": "52",
+        "main_image": "https://i.namu.wiki/i/GV6KIcNqP61kVnzSJjFnYs_r4ZCJuU7VHB6aniMgi_jLmzZBpS8Sw_lR0ABcuTffAAjjYvL7M0vfHwd89b6hNEcQOEDYC6qGg3P6Rq_3JMBGZ2KuPBtRh4omYGXlt13qj31TlcUAFNLzlx_PTz4Pdw.webp",
+        "tags": ["Rooster"],
+        "description": "Bombardiro Cudcudach represents the pinnacle of meme evolution, blending Rooster into a character that's both terrifying and hilarious.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@f14my/video/7481740183344286984", "text": "TT"}]
+    },
+    {
+        "name": "Pipi corni",
+        "section": "53",
+        "main_image": "https://i.namu.wiki/i/N9ITYytQLWMRAEvS3E5kBKwfq09pNgUY2e_hSIdCrw02od1sDmp_rVZ1loloPe7qoJX2rSFmeghJ0W26NJ9Z5nTwyH8vleBJlOy820lKqGtkhxqpC9F3hcpILUIAWIvolpnYq0ktvgQf__i3sqBiQw.webp",
+        "tags": ["Rat", "corn", "foot"],
+        "description": "Pipi corni is the result of crossing Rat, corn, foot boundaries. A true masterpiece of internet absurdity and creativity.",
+        "videos": [{"url": "https://youtu.be/A-UMx1P4Paw?si=4unLAveJHmzXBUh_", "text": "YT"}, {"url": "https://www.tiktok.com/@lifewatching1/video/7483927064463084822", "text": "TT"}]
+    },
+    {
+        "name": "Octopussini Zucchini",
+        "section": "54",
+        "main_image": "https://i.namu.wiki/i/vf0_gmZ4zX8nXKp8SdMoz7iYzSnK_U8vfz-8WeSxGKhfFQaUmWB8Z3BbcD96miiFFTV6XBSR-ORGuG0jJe0hXa4-PCNq17LIYal2GyFPFl7zgIc9OPvnQapa0KeFtFEIvjwxK4d50-dsVMu1-HaDTA.webp",
+        "tags": ["Octopus", "pumpkin"],
+        "description": "This peculiar being known as Octopussini Zucchini combines Octopus, pumpkin in ways that shouldn't be possible. Pure Italian Brainrot magic.",
+        "videos": [{"url": "https://youtu.be/BqilzSEtEPw?si=M9wFlmiMhhpujML8", "text": "YT"}, {"url": "https://www.tiktok.com/@patataposseduta/video/7491326295675079958", "text": "TT"}]
+    },
+    {
+        "name": "Borbano Capyformaggio",
+        "section": "55",
+        "main_image": "https://i.namu.wiki/i/Y8M8xvsPYXHRs3LPa5vfy9y17Q0Lh4xM1hNBmyJghUJ79hfYjNbhb-qSMoH8MLlaaAFZCaKloQPqBrNFmNg5tteW9BbTSjPxLBu9aSYrmSFbne-_ebUPwOtM0uikxeVCXXBNKTTK829GApR8rPaRJQ.webp",
+        "tags": ["Capybara", "cheese"],
+        "description": "Borbano Capyformaggio is a unique fusion character combining Capybara, cheese. This bizarre creation embodies the chaotic energy of Italian Brainrot memes.",
+        "videos": [{"url": "https://www.youtube.com/watch?v=7_RVoLCx7MU", "text": "YT"}, {"url": "https://www.tiktok.com/@glorbofruttodrillo/video/7478354089848392982", "text": "TT"}]
+    },
+    {
+        "name": "Pipi mango",
+        "section": "56",
+        "main_image": "https://i.namu.wiki/i/jarmPqUKT9CEBuIaArQMl4x6zdTycX7C3-Gg473TglVs6m_R3Buy3G3JUKktQF3tpQF_B_BfN7PqDuhkMtL-au-cavhNorNgqlcJWkrEB8W8MBAMdI-xZa-bHfovBmc8-GDw9d6_UYGsKTRMY4TZrA.webp",
+        "tags": ["Feash", "mango", "foot"],
+        "description": "A strange hybrid creature, Pipi mango merges Feash, mango, foot into one absurd entity. Their existence defies all logic and reason.",
+        "videos": [{"url": "https://youtu.be/A-UMx1P4Paw?si=4unLAveJHmzXBUh_", "text": "YT"}, {"url": "https://www.tiktok.com/@lifewatching1/video/7484050607570013462", "text": "TT"}]
+    },
+    {
+        "name": "Bonana Sharkolo",
+        "section": "57",
+        "main_image": "https://i.namu.wiki/i/RrTe7kaBB3n7717YpNFk_RVdJ0sJ-wRrE-TO1mLSQlaBJrCbAla9Elua3Mw63bRQcwKjj2o2m86Czb5V0XmYFI4z0Om_DqXErJw2vXp5W8OaVmfGrzrZB0J2yZ0HY1T8EMrVAHVIM34S9X3u7uch6w.webp",
+        "tags": ["Shark", "banana", "foot"],
+        "description": "Bonana Sharkolo is a unique fusion character combining Shark, banana, foot. This bizarre creation embodies the chaotic energy of Italian Brainrot memes.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@lifewatching1/video/7486254146585201942", "text": "TT"}]
+    },
+    {
+        "name": "Lasagnani Bearini",
+        "section": "58",
+        "main_image": "https://i.namu.wiki/i/itvXjbDy1io10q91w1WmwZbqLJadbhecKn76iW7TvUJE-yRTYGzvEuM7J-jieNr32ZGps52LLQSV4T1B1eS7htFd_ZNAehm_SG5VGMfC6XuvgaRboziSe3M4rfrU25_VFJucrELz1tcv2k04Yn7cTQ.webp",
+        "tags": ["Bear", "lasagna", "foot"],
+        "description": "Lasagnani Bearini is a unique fusion character combining Bear, lasagna, foot. This bizarre creation embodies the chaotic energy of Italian Brainrot memes.",
+        "videos": [{"url": "https://youtu.be/A-UMx1P4Paw?si=4unLAveJHmzXBUh_", "text": "YT"}, {"url": "https://www.tiktok.com/@lifewatching1/video/7486524524264033558", "text": "TT"}]
+    },
+    {
+        "name": "Coc Coconut",
+        "section": "59",
+        "main_image": "https://i.namu.wiki/i/4mlRPdZLTgdSXfis4zh7N7SVIYSpNd3flD1P-uk-MyBPrI6sPhVsa3sDIOVjE_kz8lz13aYvK1Gv1Dp2KVnwUuakiDqxV-s1spDvb7u_ha3NflfRhiFnejvqtimFcPOSaYVoV0L1u5CEmooFBIEFlA.webp",
+        "tags": ["Macak", "coconut", "Parmige Ano Regiono", "an Anubis Gaeco One", "Italian brainrot/character"],
+        "description": "Tigratoni Macchina (Sirpini Macchina), Rottiwilli Macchina ,Gongoro Macchina,Humanoti Macchina,Humanoti Macchina),Lizzi Lizzo Macchina.The second is from 10 seconds to 20 seconds.",
+        "videos": [{"url": "https://youtu.be/CYsjYel_Pq8", "text": "YT"}, {"url": "https://www.tiktok.com/@lifewatching1/video/7487748386494500118", "text": "TT"}, {"url": "https://www.tiktok.com/@piccionemacchina/video/7495855685725408518", "text": "TT"}]
+    },
+    {
+        "name": "Hipopotamino Supermarketino",
+        "section": "60",
+        "main_image": "https://i.namu.wiki/i/OGctBqIB9aqL3taEDyk3cKPo3fG6k0-SUQ9DxiLA2Ph-gtBzRijSRnLEmJyZ0GP5uIBcPxiqQA1Mk3NTr70DmXgL8666DXBM3cTdMUT9FKuBLBwCgWqT4UqByILyzdFqMncZMr-sO0vqVEdRAgKiqA.webp",
+        "tags": ["Hasa", "supermarket"],
+        "description": "Hipopotamino Supermarketino is a unique fusion character combining Hasa, supermarket. This bizarre creation embodies the chaotic energy of Italian Brainrot memes.",
+        "videos": [{"url": "https://youtu.be/BqilzSEtEPw?si=M9wFlmiMhhpujML8", "text": "YT"}, {"url": "https://www.tiktok.com/@froutatoudasous69/video/7482696122159385878", "text": "TT"}]
+    },
+];
+
+        // Function to create character card
+        function createCharacterCard(character) {
+            const tagsHtml = character.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            const videosHtml = character.videos.map(video => {
+                let className = '';
+                let displayText = '';
+                
+                if (video.text === 'YT') {
+                    className = 'youtube-icon';
+                    displayText = 'YouTube';
+                } else if (video.text === 'TT') {
+                    className = 'tiktok-icon';
+                    displayText = 'TikTok';
+                } else if (video.text === 'Pump') {
+                    className = 'pump-icon';
+                    displayText = 'Pump';
+                } else if (video.text === 'Twitter') {
+                    className = 'twitter-icon';
+                    displayText = 'Twitter';
+                }
+                
+                return `<a href="${video.url}" target="_blank" class="${className}">${displayText}</a>`;
+            }).join('');
+
+            return `
+                <div class="character-card" id="character-${character.section}">
+                    <div class="character-image-container">
+                        <img src="${character.main_image}" alt="${character.name}" class="character-image" onclick="openLightbox('${character.main_image}', '${character.name}')">
+                    </div>
+                    <div class="character-content">
+                        <div class="character-name">${character.name}</div>
+                        <div class="character-section">Section: ${character.section}</div>
+                        <div class="character-tags">${tagsHtml}</div>
+                        <div class="character-description">${character.description}</div>
+                        <div class="social-links">${videosHtml}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to create TOC item
+        function createTOCItem(character) {
+            return `<li class="toc-item"><a href="#character-${character.section}" class="toc-link">${character.section} - ${character.name}</a></li>`;
+        }
+        
+        // Lightbox functions
+        function openLightbox(imageSrc, characterName) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImage.src = imageSrc;
+            lightboxImage.alt = characterName;
+            lightboxCaption.textContent = characterName;
+            
+            lightbox.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            const charactersGrid = document.getElementById('characters-grid');
+            const tocList = document.getElementById('toc-list');
+            const characterCount = document.getElementById('character-count');
+
+            // Update the character count display
+            characterCount.textContent = charactersData.length;
+            console.log(`Loading ${charactersData.length} characters`);
+
+            // Add all characters to the grid
+            charactersData.forEach((character, index) => {
+                charactersGrid.innerHTML += createCharacterCard(character);
+                tocList.innerHTML += createTOCItem(character);
+                console.log(`Loaded character ${index + 1}: ${character.name}`);
+            });
+
+            console.log(`✅ Successfully loaded ALL ${charactersData.length} characters!`);
+
+            // Add smooth scrolling for TOC links
+            const tocLinks = document.querySelectorAll('.toc-link');
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Add character card animations
+            const cards = document.querySelectorAll('.character-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Add lightbox event listeners
+            const lightbox = document.getElementById('lightbox');
+            
+            // Close lightbox when clicking outside the image
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            
+            // Close lightbox with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.style.display === 'block') {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
