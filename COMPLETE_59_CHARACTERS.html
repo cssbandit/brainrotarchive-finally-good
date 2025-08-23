@@ -374,7 +374,7 @@
         }
         
         .pump-icon {
-            background: #00ff00;
+            background: #52d593;
             border-radius: 4px;
             display: flex;
             align-items: center;
@@ -386,12 +386,6 @@
             text-decoration: none;
             transition: opacity 0.3s ease;
             position: relative;
-        }
-        
-        .pump-icon::before {
-            content: "💎";
-            margin-right: 0.3rem;
-            font-size: 0.8rem;
         }
         
         .pump-icon:hover {
@@ -399,7 +393,7 @@
         }
         
         .twitter-icon {
-            background: #1da1f2;
+            background: #000000;
             border-radius: 4px;
             display: flex;
             align-items: center;
@@ -411,12 +405,6 @@
             text-decoration: none;
             transition: opacity 0.3s ease;
             position: relative;
-        }
-        
-        .twitter-icon::before {
-            content: "🐦";
-            margin-right: 0.3rem;
-            font-size: 0.8rem;
         }
         
         .twitter-icon:hover {
@@ -493,7 +481,7 @@
     <div class="main-container">
         <div class="content-area">
             <div class="stats">
-                <p>Total Characters: <span id="character-count">60</span> | Updated on: <span>2025-08-22 09:37:13</span></p>
+                <p>Total Characters: <span id="character-count">60</span> | Updated on: <span>2025-08-23 09:37:13</span></p>
                 <p>Pump Fun Token 7kpPfkgPS6v8CUgzrzQPpjztXj1sV2rzoB2vDiWtpump</p>
             </div>
             
@@ -533,7 +521,7 @@
         "main_image": "Twitter logo 500x50031513513513.png",
         "tags": ["hot", "wiki"],
         "description": "Welcome to the Italian Brainrot Archive S2: Mutation Chronicles! This comprehensive collection showcases the viral mutated animal characters that have taken social media by storm. Each character represents the chaotic creativity of Italian Brainrot memes, featuring bizarre fusions of animals, objects, and concepts that defy all logic and reason.",
-        "videos": [{"url": "https://pump.fun/coin/7kpPfkgPS6v8CUgzrzQPpjztXj1sV2rzoB2vDiWtpump", "text": "Pump"}, {"url": "https://x.com/rotchronicles", "text": "Twitter"}]
+        "videos": [{"url": "https://pump.fun/coin/7kpPfkgPS6v8CUgzrzQPpjztXj1sV2rzoB2vDiWtpump", "text": "Pump"}, {"url": "https://x.com/rotarchives2", "text": "X"}]
     },
     {
         "name": "Talpa Di Ferro",
@@ -1026,9 +1014,9 @@
                 } else if (video.text === 'Pump') {
                     className = 'pump-icon';
                     displayText = 'Pump';
-                } else if (video.text === 'Twitter') {
+                } else if (video.text === 'X') {
                     className = 'twitter-icon';
-                    displayText = 'Twitter';
+                    displayText = 'X';
                 }
                 
                 return `<a href="${video.url}" target="_blank" class="${className}">${displayText}</a>`;
