@@ -81,3 +81,4 @@ with open('characters_data.js', 'w', encoding='utf-8') as f:
 
 print(f"Generated data for {len(processed_characters)} characters")
 print("JavaScript array saved to characters_data.js")
+
